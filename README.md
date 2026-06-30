@@ -1,35 +1,32 @@
 # 60-Day Cholesterol Coach
 
-A simple React + local storage web app for a 60-day cholesterol-support plan.
+A React + local storage web app for a 60-day cholesterol-support plan.
 
-## Features
+## What is included
 
+- Dated 60-day calendar tracking based on your chosen start date
 - Daily meal plan with breakfast, lunch, dinner, and snack
-- Meals built around Trader Joe's, Costco, and easy grocery items
+- Cook-at-home meals using ingredients from Costco, Trader Joe's, and normal pantry items
 - Daily nutrition totals for calories, protein, fiber, saturated fat, and cholesterol
-- Daily limit checks for saturated fat at max 8% of calories and cholesterol at max 200 mg/day
-- Tuesday and Saturday workout schedule with home and gym options, 35-45 minutes
+- Saturated fat limit shown as max 8% of calories, plus cholesterol max 200 mg/day
+- Profile inputs for age, gender, height, weight, activity level, goal, and optional manual calorie target
+- Calorie plan adjusts from the profile estimate
+- Tuesday and Saturday workout schedule with home and gym versions
+- Visual movement cards for each workout step
 - Daily checklist for meals, workout, walking, water, and sleep
-- Weekly progress summary
-- Grocery list grouped by Trader Joe's, Costco, and pantry/easy grocery items
+- Weekly progress summary with dated calendar tiles
+- Weekly grocery list grouped by Costco, Trader Joe's, and pantry / regular grocery
+- Lipid lab tracker for total cholesterol, LDL, HDL, and triglycerides
 - Browser local storage persistence, no backend
 
 ## Run locally
 
-1. Open this folder in a terminal.
-2. Install dependencies:
-
 ```bash
 npm install
-```
-
-3. Start the local app:
-
-```bash
 npm run dev
 ```
 
-4. Open the local URL Vite prints, usually:
+Open the local URL Vite prints, usually:
 
 ```text
 http://127.0.0.1:5173
@@ -40,3 +37,16 @@ http://127.0.0.1:5173
 ```bash
 npm run build
 ```
+
+## Publish updates to GitHub
+
+After making changes locally:
+
+```bash
+git status
+git add .
+git commit -m "Update cholesterol coach app"
+git push
+```
+
+If the site is connected to Vercel, each push to GitHub should redeploy automatically.
