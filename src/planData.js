@@ -5,7 +5,7 @@ const mealTemplates = [
     theme: 'Oat-forward reset',
     meals: [
       meal('Breakfast', 'Costco oatmeal berry bowl', 'Old-fashioned oats, blueberries, chia, nonfat Greek yogurt, cinnamon', 430, 29, 12, 1.2, 8),
-      meal('Lunch', 'Trader Joe's lentil veggie bowl', 'Steamed lentils, cruciferous crunch, brown rice, salsa verde, avocado', 520, 24, 17, 1.6, 0),
+      meal('Lunch', "Trader Joe's lentil veggie bowl", 'Steamed lentils, cruciferous crunch, brown rice, salsa verde, avocado', 520, 24, 17, 1.6, 0),
       meal('Dinner', 'Sheet-pan salmon plate', 'Salmon, sweet potato, broccoli, lemon, olive oil spray', 610, 42, 10, 3.2, 82),
       meal('Snack', 'Apple almond crunch', 'Apple, powdered peanut butter dip, 10 almonds', 220, 9, 7, 0.7, 0)
     ]
@@ -15,7 +15,7 @@ const mealTemplates = [
     meals: [
       meal('Breakfast', 'Egg-white veggie wrap', 'Egg whites, whole wheat tortilla, spinach, pico, fruit', 390, 31, 8, 1.1, 0),
       meal('Lunch', 'Costco chicken hummus box', 'Rotisserie chicken breast, hummus, cucumbers, tomatoes, mini naan', 560, 46, 11, 2.1, 78),
-      meal('Dinner', 'Trader Joe's turkey chili rice', 'Extra lean turkey chili, cauliflower rice, beans, side salad', 590, 48, 16, 3.5, 88),
+      meal('Dinner', "Trader Joe's turkey chili rice", 'Extra lean turkey chili, cauliflower rice, beans, side salad', 590, 48, 16, 3.5, 88),
       meal('Snack', 'Greek yogurt berries', 'Nonfat Greek yogurt, raspberries, ground flax', 210, 22, 8, 0.4, 8)
     ]
   },
@@ -38,7 +38,7 @@ const mealTemplates = [
     ]
   },
   {
-    theme: 'Trader Joe's freezer assist',
+    theme: "Trader Joe's freezer assist",
     meals: [
       meal('Breakfast', 'Berry smoothie bowl', 'Frozen berries, spinach, soy milk, protein powder, oats', 450, 34, 12, 1.0, 0),
       meal('Lunch', 'Reduced-guilt veggie pizza plate', 'Vegetable flatbread portion, arugula salad, chickpeas', 560, 25, 13, 3.3, 18),
