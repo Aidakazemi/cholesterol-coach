@@ -1,0 +1,410 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17201c;
+  background: #f6f3ed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(135deg, rgba(92, 146, 130, 0.12), transparent 34%),
+    linear-gradient(225deg, rgba(202, 91, 69, 0.12), transparent 28%),
+    #f6f3ed;
+}
+
+button, select { font: inherit; }
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 28px 0 42px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #66736e;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+  color: #10251e;
+  max-width: 760px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 1.22rem;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.day-switcher {
+  display: grid;
+  grid-template-columns: 42px minmax(92px, 126px) 42px;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.day-switcher button,
+.day-switcher select {
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid #cad3ca;
+  background: #fffdfa;
+  color: #17201c;
+}
+
+.day-switcher button {
+  display: grid;
+  place-items: center;
+}
+
+.day-switcher select {
+  padding: 0 10px;
+  font-weight: 800;
+}
+
+.status-grid,
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metric-card,
+.panel,
+.meal-card,
+.workout-block {
+  border: 1px solid rgba(28, 48, 40, 0.12);
+  background: rgba(255, 253, 250, 0.9);
+  box-shadow: 0 18px 46px rgba(24, 42, 35, 0.08);
+}
+
+.metric-card {
+  min-height: 118px;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.metric-card span {
+  color: #617069;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.metric-card strong {
+  display: block;
+  margin: 8px 0 4px;
+  font-size: clamp(1.45rem, 4vw, 2.3rem);
+  line-height: 1;
+}
+
+.metric-card p {
+  margin: 0;
+  color: #5d6863;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.metric-card.good { border-color: rgba(46, 129, 83, 0.45); }
+.metric-card.alert { border-color: rgba(184, 69, 54, 0.55); background: #fff8f5; }
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.lower-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.full-width-panel {
+  grid-column: 1 / -1;
+}
+
+.panel {
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.panel-heading svg { color: #3d806f; }
+
+.meal-list {
+  display: grid;
+  gap: 10px;
+}
+
+.meal-card {
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: none;
+}
+
+.meal-title-row {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.meal-title-row span {
+  color: #3d806f;
+  font-weight: 900;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.meal-title-row strong {
+  font-size: 1.02rem;
+}
+
+.meal-card p {
+  margin: 8px 0 12px;
+  color: #4f5b55;
+  line-height: 1.45;
+}
+
+.macro-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.macro-row span {
+  border-radius: 999px;
+  background: #edf3ef;
+  color: #36463f;
+  padding: 6px 9px;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.check-item {
+  min-height: 58px;
+  border-radius: 8px;
+  border: 1px solid #d6ddd6;
+  background: #fffdfa;
+  color: #26332e;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0 12px;
+  font-weight: 850;
+}
+
+.check-item svg { color: #6d7a73; flex: 0 0 auto; }
+
+.check-item.checked {
+  background: #1f6f5d;
+  color: #ffffff;
+  border-color: #1f6f5d;
+}
+
+.check-item.checked svg { color: #ffffff; }
+
+.workout-options,
+.grocery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.grocery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grocery-group {
+  border: 1px solid #d6ddd6;
+  border-radius: 8px;
+  background: #fffdfa;
+  padding: 14px;
+}
+
+.grocery-group ul {
+  margin: 0;
+  padding-left: 19px;
+  color: #46554e;
+  line-height: 1.45;
+}
+
+.grocery-group li + li {
+  margin-top: 6px;
+}
+
+.workout-block {
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 14px 14px 14px 18px;
+}
+
+.workout-block ol {
+  margin: 0;
+  padding-left: 20px;
+  color: #46554e;
+  line-height: 1.5;
+}
+
+.workout-block li + li { margin-top: 7px; }
+
+.rest-day {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #52615b;
+  padding: 24px;
+  border: 1px dashed #b9c5bd;
+  border-radius: 8px;
+}
+
+.rest-day p {
+  max-width: 420px;
+  margin: 10px auto 0;
+  line-height: 1.5;
+}
+
+.summary-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.summary-grid .metric-card {
+  min-height: 104px;
+  padding: 14px;
+  box-shadow: none;
+}
+
+.summary-grid .metric-card strong { font-size: 1.7rem; }
+
+.mini-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.mini-calendar button {
+  min-height: 60px;
+  border-radius: 8px;
+  border: 1px solid #d6ddd6;
+  background: #fffdfa;
+  color: #26332e;
+  display: grid;
+  gap: 4px;
+  place-items: center;
+}
+
+.mini-calendar button.active {
+  background: #ca5b45;
+  color: #ffffff;
+  border-color: #ca5b45;
+}
+
+.mini-calendar span {
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.mini-calendar strong { font-size: 0.95rem; }
+
+@media (max-width: 880px) {
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .day-switcher {
+    width: 100%;
+    grid-template-columns: 46px 1fr 46px;
+  }
+
+  .status-grid,
+  .content-grid,
+  .lower-grid,
+  .workout-options,
+  .grocery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checklist,
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    width: min(100% - 20px, 480px);
+    padding-top: 18px;
+  }
+
+  h1 { font-size: 2.05rem; }
+
+  .status-grid,
+  .checklist,
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel { padding: 14px; }
+
+  .meal-title-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .mini-calendar {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
